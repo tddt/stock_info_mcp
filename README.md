@@ -30,6 +30,27 @@ stock-info/
 - 查看个股新闻
 - 获取财经新闻（支持分页）
 - 获取股票主营业务信息
+- .....后续逐渐增加
+
+## MCP客户端配置步骤
+- 1. 拉取代码
+- 2. 使用uv建立虚拟环境 python 1.10+
+- 3. 使用本地目录方式配置MCP服务
+```json
+{
+  "mcpServers": {
+     "stock-info": {
+      "isActive": true,
+      "command": "uv",
+      "args": [
+        "--directory",
+        "\\path\\to\\sock_info\\src",
+        "run",
+        "server.py"
+      ]
+    }
+  }
+```
 
 ## 环境要求
 
